@@ -23,6 +23,12 @@ textarea {
     max-height: 200px;
 }
 
+textarea:focus {
+    outline: none;
+    border-color: #A9F34A;
+    box-shadow: 0 0 5px #A9F34A;
+}
+
 button {
     width: 100%;
     min-height: 2em;
@@ -80,12 +86,49 @@ button:hover {
 .container {
     max-width: 600px;
     background-color:#202123;
-    backdrop-filter: blur(10px);
     box-shadow: 0 0 10px #333333;
+    /* border:2px solid #8b8b8b; */
     padding: 20px;
     margin: 40px auto;
     border-radius: 10px;
     font-family: Roboto;
+    position: relative;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.container::after, .container::before {
+    --angle: 0deg;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #A9F34A, #4f7222, #cbfa8e, #d8ffa5, #A9F34A);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 4px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+
+.container::before {
+    filter: blur(1.1rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+      --angle: 0deg;
+    }
+    to {
+      --angle: 360deg;
+    }
 }
 
 .container2 {
