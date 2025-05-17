@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sphere Controller Feedback</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=0.1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+      <div class="title-text">
+        <h1 id="title">SphereController Feedback</h1>
+        <p id="description">Thank you for your time giving us feedback on our Sphere Controller. This information is invaluable to us and will help us improve our application.</p>
+      </div>
+
+      <div class="container">
+        <form id="survey-form">
+          <label for="name" id="name-label">Name: 
+            <input type="text" id="name" class="name" required placeholder="" />
+          </label>
+
+          <label for="email" id="email-label">Email: 
+            <input required class="email" type="email" id="email" placeholder="" />
+          </label>
+
+          <label for="number" id="number-label">Age (optional): 
+            <input type="number" id="number" class="number" min="18" max="120" placeholder="e.g. 18" />
+          </label>
+
+          <label for="dropdown">What you doing here bucko? 
+            <select id="dropdown" class="dropdown">
+              <option value="">(select one)</option>
+              <option value="idk">IDK MAN !!</option>
+              <option value="poop">I jus shit my pant</option>
+            </select>
+          </label>
+
+          <p class="mini-header">Fuck you buddy boy!</p>
+          <label for="radio-btns"><input type="radio" id="radio-btns" class="radio-btns" name="radio-btns" /> What the hell?</label>
+
+          <label><input type="radio" id="radio-btns" class="radio-btns" name="radio-btns" /> Stupid boy</label>
+
+          <hr>
+
+          <div class="container2">
+            <p class="mini-header">Yea, you're not getting out of here for free.</p>
+            <label><input type="checkbox" value="1" /> Shut the hell up!</label>
+            <label><input type="checkbox" value="2" /> Let me leave!</label>
+            <label><input type="checkbox" value="3" /> You want money or what??</label>
+            <label><input type="checkbox" value="4" /> Here!! $3000 dollars!!</label>
+          </div>
+
+          <label for="last-words" id="textlabel">Any last words amigo?
+            <textarea rows=5" cols="30" id="last-words" class="last-words"></textarea>
+          </label>
+
+          <button id="submit">SUBMIT</button>
+
+        </form>
+      </div>
+    </body>
+</html>
